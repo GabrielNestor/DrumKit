@@ -1,5 +1,7 @@
 import "./styles.css";
 
+var note = document.getElementById("a");
+
 var audioClap = new Audio("sounds/clap.wav");
 var audioHihat = new Audio("sounds/hihat.wav");
 var audioKick = new Audio("sounds/kick.wav");
@@ -12,8 +14,15 @@ var audioTink = new Audio("sounds/tink.wav");
 
 window.addEventListener("keydown", checkKeyPress);
 
+function popNote(el) {
+  el.style.transform = "scale(1.1)";
+  el.style.transition = "0.05s ease-in";
+  el.style.borderColor = "yellow";
+}
+
 function checkKeyPress(key) {
   if (key.keyCode === 65) {
+    popNote(note);
     audioClap.play();
   } else if (key.keyCode === 83) {
     audioHihat.play();
