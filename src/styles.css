@@ -3,55 +3,51 @@ body {
   background-image: url("background.jpg");
 }
 
-.notes__container {
-  height: 110px;
-  width: 1000px;
-  border: solid;
-  border-color: yellow;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-.note {
+.key {
   width: 80px;
   height: 80px;
   margin: 15px;
+  color: white;
   display: flex;
+  text-align: center;
   transition: all 0.07s;
+  background: rgba(82, 212, 245, 0.4);
   flex-direction: column;
   border: solid;
+  border-width: 4px;
+  border-radius: 5px;
   justify-content: center;
-  border-color: #131313;
+  border-color: #028388;
+}
+
+.keys {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .playing {
   transform: scale(1.1);
-  border-color: yellow;
-  box-shadow: 0 0 0 10px;
+  border-color: rgb(255, 255, 255);
+  box-shadow: 0 0 0 1px;
 }
 
-.note h1 {
-  font-size: 40px;
-  color: yellow;
-  text-align: center;
-  margin: 1px;
+kbd {
+  display: block;
+  font-size: 2rem;
 }
 
-.note p {
-  font-size: 20px;
-  color: yellow;
-  text-align: center;
-  margin: 1px;
-}
-
-.noteinfo {
-  font-size: 20px;
-  color: yellow;
-  bottom: 0;
-  margin: 1rem;
-  position: fixed;
+.sound {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: seashell;
 }
